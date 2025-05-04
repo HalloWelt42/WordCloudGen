@@ -1,6 +1,4 @@
 from wordcloud import WordCloud, STOPWORDS
-import matplotlib.pyplot as plt
-
 
 def main():
     with open('beitrag.txt') as file:
@@ -15,7 +13,7 @@ def main():
                 STOPWORDS.add(word)
 
     wordcloud.generate(text)
-    # wordcloud.to_file('wordcloud.png')
+    wordcloud.to_file('wordcloud.png')
 
 
 if __name__ == '__main__':
